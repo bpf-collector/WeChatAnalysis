@@ -48,6 +48,8 @@ class WeChatGroupMember:
         return group, groupName
 
     def getGroupMember(self, group):
+        self.nickName.clear()
+        self.displayName.clear()
         # 获取群聊所有成员的 备注、群昵称
         for member in group:
             self.nickName.append(member.raw.get('NickName'))
